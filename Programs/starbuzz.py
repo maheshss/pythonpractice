@@ -1,5 +1,5 @@
 import urllib.request
-page = urllib.request.urlopen("http://www.beans-r-us.biz/prices.html")
+page = urllib.request.urlopen("http://www.facebook.com")
 text = page.read().decode("utf8")
-price = text[234:238]
-print(price)
+#price = text[234:238]
+print(text)
