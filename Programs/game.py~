@@ -1,0 +1,41 @@
+from tkinter import *
+from random import randint
+secret=randint(1,10)
+
+#print("Welcome!")
+#guess=0
+#while guess!=secret:
+#	g=input("Enter your guess value:")
+#	guess=int(g)
+#	if guess!=secret:
+#		if guess>secret:
+#			print("Too High")
+#		else:
+#			print("Too Low")
+#	else:
+#		print("You Win")
+#print("Game Over!")
+
+app=Tk()
+app.title("Game")
+Label(app,text="Enter Your Guess").pack()
+guess=Entry(app)
+Entry.pack()
+
+ans=IntVar()
+ans.set(0)
+ans.set(guess)
+op=StringVar()
+
+
+def fun():
+	if ans.get()==secret:
+		op.set("Correct!")
+	else:
+		op.set("Wrong")
+
+
+Button(app,text="Submit",command=fun).pack()
+Label(app,textvariable=op.get()).pack()
+
+app.mainloop()
